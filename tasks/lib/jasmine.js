@@ -58,7 +58,7 @@ exports.init = function(grunt, phantomjs) {
         if (fs.existsSync(path)) exports.copyTempFile(path, name);
     });
 
-    exports.copyTempFile(__dirname + '/../../node_modules/es5-shim/es5-shim.js', 'es5-shim.js');
+    exports.copyTempFile(require.resolve("es5-shim/es5-shim.js"), 'es5-shim.js');
 
     var reporters = [
       tempDir + '/reporter.js'
